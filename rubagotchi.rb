@@ -13,7 +13,7 @@ def new_pet
   {
     hunger: 3,
     happiness: 3,
-    poop: false,
+    messy: false,
     sleep: false,
     sick: false,
     birthday: DateTime.now.to_s,
