@@ -1,0 +1,42 @@
+<div class="device" style="position:relative;">
+  <div class="message-gutter">
+    <% if session[:message] %>
+      <%= session.delete(:message) %>
+    <% end %>
+  </div>
+  <div class="screen<%= ' screen-sleeping' if @pet[:sleep] %>">
+    <img src="/images/<%= @screen %>.gif" />
+  </div>
+  <div class="actions">
+    <ul>
+      <li>
+        <a class="button-icon" href="/food" title="Food">
+          <img class="icon" src="/images/icon-food.png"/>
+        </a>
+      </li>
+      <li>
+        <a class="button-icon" href="/info" title="Info">
+          <img class="icon" src="/images/icon-info.png"/>
+        </a>
+      </li>
+      <li>
+        <a class="button-icon" href="/doctor" title="Doctor">
+          <img class="icon" src="/images/icon-med.png"/>
+        </a>
+      </li>
+      <li>
+        <a class="button-icon" href="/bathroom" title="Bathroom">
+          <img class="icon" src="/images/icon-bathroom.png"/>
+        </a>
+      </li>
+      <li>
+        <form method="post" action="/sleep">
+          <input type="radio" name="sleep" checked value="<%= !@pet[:sleep] %>"/>
+          <button class="button-icon" type="submit" title="Sleep">
+            <img class="icon" src="/images/icon-sleep.png"/>
+          </button>
+        </form>
+      </li>
+  </div>
+<a class="link-help" href="/help">Help</a>
+</div>

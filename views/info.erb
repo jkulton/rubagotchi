@@ -1,0 +1,47 @@
+<div class="device">
+  <div class="message-gutter">
+    Info:
+  </div>
+    <div class="screen screen-wrap">
+        <div>
+          <% if hours_old < 24 %>
+            <h2>Hours Old</h2>
+            <h3><%= hours_old %></h3>
+          <% else %>
+            <h2>Days Old</h2>
+            <h3><%= days_old %></h3>
+          <% end %>
+        </div>
+        <div>
+          <h2>Happiness</h2>
+          <ul class="heart-list">
+            <% 5.times do |counter| %>
+              <li>
+                <% if (counter + 1) <= @pet[:happiness] %>
+                  <img src="/images/heart-filled.png" class="heart"/>
+                <% else %>
+                  <img src="/images/heart-empty.png" class="heart"/>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <div>
+          <h2>Hunger</h2>
+          <ul class="heart-list mb40">
+            <% 5.times do |counter| %>
+              <li>
+                <% if (counter + 1) <= @pet[:hunger] %>
+                  <img src="/images/heart-filled.png" class="heart"/>
+                <% else %>
+                  <img src="/images/heart-empty.png" class="heart"/>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+    </div>
+    <div class="actions">
+      <a class="button-text" href="/">Done</a>
+    </div>
+</div>

@@ -1,0 +1,216 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+.wrapper {
+  width: 100%;
+  height: 100%;
+  font-family: 'Press Start 2P';
+}
+
+.device {
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+  box-shadow: 0 0px 1px 0 rgba(0,0,0,0.15);
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  max-height: 700px;
+  max-width: 500px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.message-gutter {
+  width: 100%;
+  padding: 10px;
+  height: 80px;
+  font-size: 24px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.screen {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen img {
+  max-width: 400px;
+  height: auto;
+}
+
+.screen-sleeping {
+  background: #000;
+}
+
+.screen-sleeping img {
+  background: #f1f1f1;
+}
+
+.actions {
+  width: 100%;
+  border-top: 1px solid #ddd;
+  display: flex;
+  padding: 10px;
+  height: 80px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.actions ul {
+  justify-content: space-around;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+form label {
+  display: block;
+  padding: 10px;
+  margin: 10px;
+  font-size: 24px;
+  text-align: center;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+
+form input[type="radio"]:checked + label {
+  background: #000;
+  color: #fff;
+}
+
+button {
+  border: none;
+  font-family: 'Press Start 2P';
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.button-text {
+  background: #000;
+  color: #fff;
+  font-size: 24px;
+  padding: 12px 8px 8px 12px;
+  text-decoration: none;
+}
+
+.button-icon {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.button-icon:hover {
+  background: transparent;
+}
+
+.button-icon .icon {
+  width: 50px;
+  height: 50px;
+  border-bottom: 4px solid transparent;
+}
+
+.button-icon:hover .icon {
+  border-bottom-color: #000;
+}
+
+.screen-wrap {
+  padding-top: 20px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.screen-wrap h2 {
+  margin: 20px 0;
+}
+
+.screen-wrap div {
+  text-align: center;
+  margin: 10px 0;
+  width: 90%;
+}
+
+.heart-list {
+  display: flex;
+  justify-content: center;
+}
+
+img.heart {
+  height: 50px;
+  width: 60px;
+  margin: 0 4px;
+}
+
+.mb40 {
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 400px) {
+  img.heart {
+    height: 40px;
+    width: 50px;
+    margin: 0 4px;
+  }
+}
+
+img.in-text-icon {
+  width: 26px;
+  margin: 0 4px;
+  max-width: 400px;
+  height: auto;
+  position: relative;
+  top: 2px;
+}
+
+.screen-help p {
+  font-size: 18px;
+  line-height: 32px;
+  margin: 10px 30px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.link-help {
+  color: #a6a6a6;
+  font-family: sans-serif;
+  position: absolute;
+  right: 0;
+  bottom: -22px;
+  font-size: 13px;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+.link-help:hover {
+  color: #808080;
+}
